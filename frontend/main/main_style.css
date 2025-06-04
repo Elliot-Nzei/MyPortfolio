@@ -1,0 +1,280 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #110d2e;
+    margin: 0;
+    padding: 20px;
+    color: #ffffff;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+
+}
+
+div {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1a1538;
+    text-align: center;
+}
+
+nav {
+    display: block;
+    border-radius: 20px;
+    background-color: #1a1538;
+    padding: 10px;
+    
+}
+
+img {
+    max-width: 20%;
+    height: 20%;
+    border-radius: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    display: block;
+}
+
+#menu-toggle {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1100;
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #963b3b00;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(7px);
+  padding: 1rem;
+  width: 200px;
+  height: 100%;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  transform: translateX(-100%);
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin: 1rem 0;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu.show {
+  transform: translateX(0);
+}
+
+
+
+
+.switch-menu {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.switch-btn {
+  padding: 10px 20px;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.switch-btn.active {
+  background-color: #333;
+  color: white;
+}
+
+.switch-content {
+  display: none;
+  text-align: center;
+}
+
+.switch-content.hidden {
+  display: none;
+}
+
+.switch-content:not(.hidden) {
+  display: block;
+}
+
+
+section {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1a1538;
+}
+
+
+
+/* Skills Section Styles */
+
+.skills {
+  max-width: 400px;
+  margin: 30px auto;
+  background: transparent;
+  padding: 20px 15px;
+  border-radius: 10px;
+  box-shadow: none;
+  text-align: left;
+}
+
+.skills h2 {
+  text-align: center;
+  margin-bottom: 18px;
+  font-size: 1.3em;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.skill {
+  margin-bottom: 12px;
+}
+
+.skill span {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 4px;
+  color: #fff;
+  font-size: 0.98em;
+}
+
+.skill-bar {
+  background: #22234a;
+  border-radius: 10px;
+  height: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  border-radius: 10px;
+  color: #fff;
+  text-align: right;
+  padding-right: 6px;
+  font-size: 10px;
+  font-weight: bold;
+  position: relative;
+  animation: fillAnimation 2s ease forwards;
+  line-height: 12px;
+}
+
+.skill-fill::after {
+  content: attr(data-label);
+  position: absolute;
+  right: 6px;
+  top: 0;
+  font-size: 10px;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.html { background: #007bff; width: 90%; }
+.css { background: #6f42c1; width: 60%; }
+.jquery { background: #20c997; width: 85%; }
+.python { background: #ffc107; width: 50%; color: #000; }
+.mysql { background: #fd7e14; width: 5%; }
+
+
+
+
+/* Portfolio Section Styles */
+
+.portfolio-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0;
+    gap: 60px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.project-card {
+    background-color: white;
+    border: 2px solid #333;
+    width: calc(50% - 100px); /* Two cards side by side with gap */
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.project-card h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.project-content {
+    display: flex;
+    gap: 15px;
+}
+
+.project-image {
+    flex: 3;
+    background-color: #ddd; /* Placeholder for image */
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.project-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.project-info a {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.project-info a:hover {
+    text-decoration: underline;
+}
+
+.project-description {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        width: 100%; /* Stack cards on smaller screens */
+    }
+}
